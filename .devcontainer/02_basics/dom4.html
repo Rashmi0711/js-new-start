@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: #fff">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    //adding language 1st way
+    function addLAnguage(languageNAme){
+   const liitem = document.createElement('li')
+  //%
+   liitem.innerHTML=`${languageNAme}`
+   document.querySelector('.language').
+   appendChild(liitem)
+    }
+    addLAnguage("pythoned")
+
+    
+    //adding language 2st way
+    function addoptiLanguage (langName){
+        const li=document.createElement('li')
+        //%
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addoptiLanguage('golang')
+
+    //3rd way
+    const secondLang =document.querySelector("li:nth-child(2)")
+    //secondLang.innerHTML ="mojo"
+  const newLi=  document.createElement('li')
+  newLi.textContent = "jo"
+  secondLang.replaceWith(newLi)
+
+  //1st javascript ko replce krna h 0/p java, jo, golang
+  const firstlang = document.querySelector("li:first-child")
+  firstlang.outerHTML ='<li>typeScript</li>'
+
+  //remove karenge
+  const lastLAng= document.querySelector('li:last-child')
+  lastLAng.remove()
+
+// how dom working , behind the seen screats, optimized sturcture, nodelist, traversing , parent child kaise jate h, child ke sbling , new element , queryselectors practise, edit outerhtml innerhtml add remove replace
+</script>
+</html>
